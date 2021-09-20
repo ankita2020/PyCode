@@ -8,6 +8,10 @@ import json
 
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     for col in columns[0:1]:
         if oper =='add':
             df['add'] = df[col]
