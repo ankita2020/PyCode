@@ -6,6 +6,10 @@ import json
 col=''
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     if col in df:
         transform = df[col].values
         # transform values and store as "dft"
