@@ -11,6 +11,10 @@ color_col = ''
 
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     fig = px.histogram(df, x=col1, y=col2, color=color_col, marginal="box",hover_data=df.columns)
     _helper.chart(fig)
     
