@@ -9,6 +9,10 @@ col=''
 
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     #clean html
     def cleanhtml(sent):
         clean = re.sub(r'<*?>', r' ', str(sent))
