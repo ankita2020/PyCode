@@ -10,6 +10,10 @@ from sklearn.preprocessing import PowerTransformer
 
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     for c in col:
         if c in df:
             df[c] =df[c].astype('int64')
