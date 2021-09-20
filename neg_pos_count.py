@@ -9,6 +9,10 @@ import json
 
 def main():
     data = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     if var == 'positive':
         data['positive_count'] = data.select_dtypes(include='number').ge(1).sum(axis=1)
         
