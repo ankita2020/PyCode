@@ -30,6 +30,10 @@ from datetime import datetime, timedelta
 
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     for col in columns :
         if method_type=='rolling':
             if win_size_type=='window_by_row':
