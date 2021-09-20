@@ -8,6 +8,10 @@ import json
 
 def main():
     data = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     if column in data:
         data['logarithm_base10'] = np.log10(data[column])
     
