@@ -8,6 +8,10 @@ from scipy.stats import ttest_1samp, wilcoxon, shapiro
 
 def main():
     df= _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     if t_test=='student t_test':
         # null hypothesis: expected value =
         t_statistic, p_value = ttest_1samp(df[col], 0)
