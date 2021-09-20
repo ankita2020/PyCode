@@ -9,6 +9,10 @@ import json
 
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     for col in columns:
         if col in df.columns:
             df[col+"_n_root"]=df[col]**m
