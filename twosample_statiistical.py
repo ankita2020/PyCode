@@ -13,6 +13,10 @@ from scipy.stats import ttest_ind,ks_2samp, median_test
 
 def main():
     df=_helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     if t_test=='student t_test':
         # null hypothesis: expected value =
         a = df.loc[df[col_1] == df[col_1].value_counts().index[0], col_2].to_numpy()
