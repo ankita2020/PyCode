@@ -8,6 +8,10 @@ import json
 
 def main():
     df = _helper.data()
+    if df.empty:
+        raise ValueError('Data Loading failed !')
+    else:
+        pass
     tfidf = TfidfVectorizer()
     if column in df:
         tf_idf_data = tfidf.fit_transform(df[column])
