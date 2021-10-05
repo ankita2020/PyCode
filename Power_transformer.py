@@ -29,7 +29,7 @@ def main():
             
 
         else:
-            return None
+            Pass
     
     
     return _helper.publish(df)
